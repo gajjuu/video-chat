@@ -7,8 +7,6 @@ var path = require('path');
 
 // This correctly serves all files from your 'public' folder
 app.use( '/', express.static(path.join(__dirname, '../public/')) );
-app.use( favicon(path.join(__dirname, '../public/favicon.ico')) );
-
 
 io.on('connection', function (socket) {
     socket.on('join', function (data) {
