@@ -11,8 +11,6 @@ let pcConfig = {
     'iceServers': []
 };
 
-
-// Set up audio and video regardless of what devices are present.
 let sdpConstraints = {
     'mandatory': {
         'OfferToReceiveAudio': true,
@@ -20,13 +18,11 @@ let sdpConstraints = {
     }
 };
 
-
-// This is the correct place for your Xirsys ICE server configuration
 let getIceServer = () => {
     let turnServer = {
         iceServers: [
             {
-                urls: ["stun:stun.l.google.com:19302"] // Public STUN server as a fallback
+                urls: ["stun:stun.l.google.com:19302"]
             },
             {
                 urls: [
@@ -38,17 +34,13 @@ let getIceServer = () => {
             }
         ]
     };
-
     return turnServer;
 };
 
-
 function createPeerConnection(isInitiator, localStream, remoteStream, remoteVideo, sendSignal) {
     pcConfig.iceServers = getIceServer().iceServers;
-
     try {
         myPeerConnection = new RTCPeerConnection(pcConfig);
-
         myPeerConnection.onicecandidate = (event) => {
             if (event.candidate) {
                 sendSignal({
@@ -57,23 +49,17 @@ function createPeerConnection(isInitiator, localStream, remoteStream, remoteVide
                 });
             }
         };
-
-
         myPeerConnection.ontrack = (event) => {
             if (remoteVideo.srcObject !== event.streams[0]) {
                 remoteVideo.srcObject = event.streams[0];
             }
         };
-
-
         if (isInitiator) {
             if (localStream) {
                 localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
             }
-
             myPeerConnection.createOffer().then(sdp => {
                 myPeerConnection.setLocalDescription(sdp);
-
                 sendSignal(sdp);
             });
         } else {
@@ -87,7 +73,6 @@ function createPeerConnection(isInitiator, localStream, remoteStream, remoteVide
         return;
     }
 }
-
 
 function closePeerConnection() {
     if (myPeerConnection) {
