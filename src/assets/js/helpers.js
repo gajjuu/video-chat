@@ -106,16 +106,24 @@ export default {
         }
     },
     
-    
-    getIceServer() {
+    function getIceServer() {
         return {
             iceServers: [
+                { urls: ["stun:stun.l.google.com:19302"] },
                 {
-                    urls: ["stun:stun.l.google.com:19302"]
+                    urls: [
+                        "turn:global.xirsys.net:80?transport=udp",
+                        "turn:global.xirsys.net:3478?transport=tcp"
+                    ],
+                    username: "gajjuthecreator",
+                    credential: "9d80b218-9d3c-11f0-8c60-0242ac140002"
                 }
             ]
         };
     }
+
+export { getIceServer };
+
 
 
 
