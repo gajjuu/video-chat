@@ -68,7 +68,7 @@ function createPeerConnection(isInitiator, localStream, remoteStream, remoteVide
             }
         }
     } catch (e) {
-        console.log('Failed to create PeerConnection, exception: ' + e.message);
+        console.log('Failed to create PeerConnection, exception: ' ' + e.message);
         alert('Cannot create RTCPeerConnection object.');
         return;
     }
