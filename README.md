@@ -14,7 +14,6 @@
 It enables users to connect, communicate, and collaborate with up to **four participants** simultaneously — peer-to-peer, without external dependencies.
 
 > Designed as a lightweight, open-source alternative to platforms like Google Meet for small teams and projects.
-
 ---
 
 ### ⚙️ Getting Started
