@@ -10,13 +10,14 @@ let io = require( 'socket.io' )( server, {
 let stream = require( './ws/stream' );
 let path = require( 'path' );
 
-// Serve static files from src directory
-app.use( express.static( path.join( __dirname ) ) );
-app.use( '/assets', express.static( path.join( __dirname, 'assets' ) ) );
-
+// Serve index.html at root
 app.get( '/', ( req, res ) => {
     res.sendFile( path.join( __dirname, 'index.html' ) );
 } );
+
+// Serve static files
+app.use( express.static( path.join( __dirname ) ) );
+app.use( '/assets', express.static( path.join( __dirname, 'assets' ) ) );
 
 io.of( '/stream' ).on( 'connection', stream );
 
