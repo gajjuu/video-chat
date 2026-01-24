@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: video-call-app
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/app.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
