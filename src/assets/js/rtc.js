@@ -1,6 +1,5 @@
 /**
- * @author Amir Sanni <amirsanni@gmail.com>
- * @date 6th January, 2020
+ * @author Gajendra Gouda <gajendragouda254@gmail.com>
  */
 import h from './helpers.js';
 
