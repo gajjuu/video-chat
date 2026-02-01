@@ -23,6 +23,3 @@ A conference call implementation using WebRTC, Socket.io and Node.js. This demo 
 # Demo
 You can test at (https://group-ft.onrender.com)
 
-
-# Alternative
-If you prefer to use PHP Web socket (Ratchet) instead of socket.io and NodeJS, check out the PHP version [here](https://github.com/amirsanni/conference-call-ratchet).
