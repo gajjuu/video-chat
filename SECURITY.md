@@ -6,4 +6,4 @@ This repository is not actively maintained but I try as much as I can to fix all
 
 ## Reporting a Vulnerability
 
-To report a vulnerability, you can send me an email at amirsanni@gmail.com. Thank you.
+To report a vulnerability, you can send me an email at gajendragouda254@gmail.com. Thank you.
