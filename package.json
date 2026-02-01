@@ -18,16 +18,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amirsanni/livestream-server.git"
+    "url": "git+https://github.com/gajjuu/livestream-server.git"
   },
   "keywords": [
     "LiveStream",
     "Server"
   ],
-  "author": "Amir Sanni <amirsanni@gmail.com>",
+  "author": "Gajendra Gouda <gajendragouda254@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/amirsanni/livestream-server/issues"
+    "url": "https://github.com/gajjuu/livestream-server/issues"
   },
-  "homepage": "https://github.com/amirsanni/livestream-server#readme"
+  "homepage": "https://github.com/gajjuu/livestream-server#readme"
 }
